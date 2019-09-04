@@ -20,6 +20,9 @@ import { AdminProductsComponent } from './components/admin/admin-products/admin-
 import { AdminOrdersComponent } from './components/admin/admin-orders/admin-orders.component';
 import { LoginComponent } from './components/login/login.component';
 import { environment } from 'src/environments/environment';
+import { ProductFormComponent } from './components/admin/product-form/product-form.component';
+import { FormsModule } from '@angular/forms';
+import { CustomFormsModule } from 'ng2-validation'
 
 
 @NgModule({
@@ -34,7 +37,8 @@ import { environment } from 'src/environments/environment';
     MyOrdersComponent,
     AdminProductsComponent,
     AdminOrdersComponent,
-    LoginComponent
+    LoginComponent,
+    ProductFormComponent
   ],
   imports: [
     BrowserModule,
@@ -42,7 +46,9 @@ import { environment } from 'src/environments/environment';
     NgbModule,
     AngularFireModule.initializeApp(environment.firebase),
     AngularFireDatabaseModule,
-    AngularFireAuthModule
+    AngularFireAuthModule,
+    FormsModule,
+    CustomFormsModule
   ],
   providers: [],
   bootstrap: [AppComponent]
