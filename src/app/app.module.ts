@@ -1,4 +1,6 @@
 import { BrowserModule } from '@angular/platform-browser';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+
 import { NgModule } from '@angular/core';
 import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 import { AngularFireModule } from '@angular/fire';
@@ -24,6 +26,11 @@ import { ProductFormComponent } from './components/admin/product-form/product-fo
 import { FormsModule } from '@angular/forms';
 import { CustomFormsModule } from 'ng2-validation';
 import { MatTableModule } from '@angular/material/table';
+import { MatPaginatorModule } from '@angular/material/paginator';
+import { MatSortModule } from '@angular/material/sort';
+import { MatFormFieldModule } from '@angular/material/form-field';
+
+
 
 
 @NgModule({
@@ -43,6 +50,7 @@ import { MatTableModule } from '@angular/material/table';
   ],
   imports: [
     BrowserModule,
+    BrowserAnimationsModule,
     AppRoutingModule,
     NgbModule,
     AngularFireModule.initializeApp(environment.firebase),
@@ -50,7 +58,10 @@ import { MatTableModule } from '@angular/material/table';
     AngularFireAuthModule,
     FormsModule,
     CustomFormsModule,
-    MatTableModule
+    MatTableModule,
+    MatPaginatorModule,
+    MatSortModule,
+    MatFormFieldModule
   ],
   providers: [],
   bootstrap: [AppComponent]
