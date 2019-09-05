@@ -22,7 +22,8 @@ import { LoginComponent } from './components/login/login.component';
 import { environment } from 'src/environments/environment';
 import { ProductFormComponent } from './components/admin/product-form/product-form.component';
 import { FormsModule } from '@angular/forms';
-import { CustomFormsModule } from 'ng2-validation'
+import { CustomFormsModule } from 'ng2-validation';
+import { MatTableModule } from '@angular/material/table';
 
 
 @NgModule({
@@ -48,7 +49,8 @@ import { CustomFormsModule } from 'ng2-validation'
     AngularFireDatabaseModule,
     AngularFireAuthModule,
     FormsModule,
-    CustomFormsModule
+    CustomFormsModule,
+    MatTableModule
   ],
   providers: [],
   bootstrap: [AppComponent]
