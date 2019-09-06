@@ -21,7 +21,7 @@ export class ProductFormComponent implements OnInit {
     private route: ActivatedRoute,
     private categoriesService: CategoriesService
   ) {
-    this.categories$ = categoriesService.getCategories()
+    this.categories$ = categoriesService.getAll()
     this.id = route.snapshot.paramMap.get('id')
     if (this.id) productService.get(this.id)
       .pipe(

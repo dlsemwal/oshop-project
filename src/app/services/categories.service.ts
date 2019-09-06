@@ -10,7 +10,7 @@ export class CategoriesService {
     private db: AngularFireDatabase
   ) { }
 
-  getCategories() {
+  getAll() {
     return this.db.list('/categories', ref => ref.orderByChild('name')).snapshotChanges()
   }
 }

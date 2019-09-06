@@ -32,6 +32,7 @@ export class AdminProductsComponent implements OnInit, OnDestroy {
     this.dataSource = new MatTableDataSource<any>(this.products);
     this.dataSource.paginator = this.paginator;
     this.dataSource.sort = this.sort;
+    console.log(this.sort);
 
   }
 
