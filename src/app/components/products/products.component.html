@@ -6,7 +6,8 @@
         <div class="row">
             <ng-container *ngFor="let item of filteredProducts; odd as isOdd">
                 <div class="col">
-                    <product-card [product]="item.payload.val()" [show-actions]="true"></product-card>
+                    <product-card [shopping-cart]="cart" [product]="item.payload.val()" [key]="item.payload.key" [show-actions]="true">
+                    </product-card>
                 </div>
                 <div class="w-100" *ngIf="isOdd"></div>
             </ng-container>
