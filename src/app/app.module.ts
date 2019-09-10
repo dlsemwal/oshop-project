@@ -31,6 +31,7 @@ import { MatSortModule } from '@angular/material/sort';
 import { MatFormFieldModule, MatInputModule } from '@angular/material';
 import { ProductFilterComponent } from './components/products/product-filter/product-filter.component';
 import { ProductCardComponent } from './components/product-card/product-card.component';
+import { ProductQuantityComponent } from './product-quantity/product-quantity.component';
 
 
 
@@ -50,7 +51,8 @@ import { ProductCardComponent } from './components/product-card/product-card.com
     LoginComponent,
     ProductFormComponent,
     ProductFilterComponent,
-    ProductCardComponent
+    ProductCardComponent,
+    ProductQuantityComponent
   ],
   imports: [
     BrowserModule,
