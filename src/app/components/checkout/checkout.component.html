@@ -1,1 +1,48 @@
-<p>checkout works!</p>
+<h1>
+    Shipping
+</h1>
+<div class="row">
+    <div class="col">
+        <form #f="ngForm" (ngSubmit)="placeOrder()">
+            <div class="form-group">
+                <label for="name">
+                    Name:
+                </label>
+                <input id="name" type="text" name="name" class="form-control" [(ngModel)]="shipping.name"
+                    #name="ngModel" required>
+                <div class="alert alert-danger" *ngIf="name.touched && name.invalid">
+                    Name is required!!!
+                </div>
+            </div>
+            <div class="form-group">
+                <label for="address">
+                    Address:
+                </label>
+                <input id="address" name="addressLine1" type="text" class="form-control" placeholder="Line 1"
+                    [(ngModel)]="shipping.addressLine1" #addressLine1="ngModel" required>
+                <div class="alert alert-danger" *ngIf="addressLine1.touched && addressLine1.invalid">
+                    Required field!!!
+                </div>
+                <input type="text" name="addressLine2" class="form-control mt-4" placeholder="Line 2"
+                    [(ngModel)]="shipping.addressLine2" #addressLine2="ngModel" required>
+                <div class="alert alert-danger" *ngIf="addressLine2.touched && addressLine2.invalid">
+                    Required field!!!
+                </div>
+            </div>
+            <div class="form-group mt-4">
+                <label for="city">
+                    City:
+                </label>
+                <input type="text" name="city" class="form-control" [(ngModel)]="shipping.city" #city="ngModel"
+                    required>
+                <div class="alert alert-danger" *ngIf="city.touched && city.invalid">
+                    City is required!!!
+                </div>
+            </div>
+            <button type="submit" class="btn btn-success">
+                Place Order
+            </button>
+        </form>
+    </div>
+    <div class="col"></div>
+</div>
