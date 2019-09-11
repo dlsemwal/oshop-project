@@ -5,7 +5,7 @@ import { Observable, of } from 'rxjs';
 import { ActivatedRoute } from '@angular/router';
 import { AppUser } from 'shared/models/app-user';
 import { switchMap } from 'rxjs/operators';
-import { UserService } from './user.service';
+import { UserService } from 'shared/services/user/user.service';
 
 @Injectable({
   providedIn: 'root'

@@ -8,8 +8,8 @@ import { OrderSuccessComponent } from './components/order-success/order-success.
 import { LoginComponent } from './components/login/login.component';
 import { AdminProductsComponent } from './components/admin/admin-products/admin-products.component';
 import { AdminOrdersComponent } from './components/admin/admin-orders/admin-orders.component';
-import { AuthGuard } from './guards/auth-guard.service';
-import { AdminAuthGuard } from './guards/admin-auth-guard.service';
+import { AuthGuard } from 'shared/guards/auth-guard.service';
+import { AdminAuthGuard } from 'shared/guards/admin-auth-guard.service';
 import { ProductFormComponent } from './components/admin/product-form/product-form.component';
 import { MyOrdersComponent } from './components/my-orders/my-orders.component';
 

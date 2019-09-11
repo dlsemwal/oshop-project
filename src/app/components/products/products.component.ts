@@ -2,9 +2,9 @@ import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
 import { switchMap } from 'rxjs/operators';
 import { Subscription, Observable } from 'rxjs';
-import { ProductService } from 'app/services/product/product.service';
-import { ShoppingCartService } from 'app/services/shopping-cart/shopping-cart.service';
 import { ShoppingCart } from 'shared/models/shopping-cart';
+import { ProductService } from 'shared/services/product/product.service';
+import { ShoppingCartService } from 'shared/services/shopping-cart/shopping-cart.service';
 
 @Component({
   selector: 'app-products',
