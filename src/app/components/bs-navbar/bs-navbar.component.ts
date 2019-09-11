@@ -25,7 +25,7 @@ export class BsNavbarComponent implements OnInit {
 
     let cart$ = await this.cartService.getCart()
     cart$.subscribe(cart => {
-      this.shoppingCartItemCount = cart.shoppingCartItemCount
+      this.shoppingCartItemCount = cart.totalItemCount
     })
   }
 

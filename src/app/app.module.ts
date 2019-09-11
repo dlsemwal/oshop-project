@@ -32,6 +32,8 @@ import { MatFormFieldModule, MatInputModule } from '@angular/material';
 import { ProductFilterComponent } from './components/products/product-filter/product-filter.component';
 import { ProductCardComponent } from './components/product-card/product-card.component';
 import { ProductQuantityComponent } from './product-quantity/product-quantity.component';
+import { CartSummaryComponent } from './components/cart-summary/cart-summary.component';
+import { ShippingFormComponent } from './components/shipping-form/shipping-form.component';
 
 
 
@@ -52,7 +54,9 @@ import { ProductQuantityComponent } from './product-quantity/product-quantity.co
     ProductFormComponent,
     ProductFilterComponent,
     ProductCardComponent,
-    ProductQuantityComponent
+    ProductQuantityComponent,
+    CartSummaryComponent,
+    ShippingFormComponent
   ],
   imports: [
     BrowserModule,
