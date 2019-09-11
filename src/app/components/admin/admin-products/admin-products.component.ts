@@ -1,9 +1,9 @@
 import { Component, OnInit, OnDestroy, ViewChild } from '@angular/core';
-import { ProductService } from 'src/app/services/product/product.service';
 import { Subscription } from 'rxjs';
 import { MatTableDataSource } from '@angular/material/table';
 import { MatPaginator } from '@angular/material/paginator';
 import { MatSort } from '@angular/material/sort';
+import { ProductService } from 'app/services/product/product.service';
 
 @Component({
   selector: 'app-admin-products',

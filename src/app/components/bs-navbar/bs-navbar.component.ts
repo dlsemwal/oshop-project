@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
-import { AuthService } from 'src/app/services/auth.service';
-import { AppUser } from 'src/app/models/app-user';
-import { ShoppingCartService } from 'src/app/services/shopping-cart/shopping-cart.service';
+import { AuthService } from 'app/services/auth.service';
+import { ShoppingCartService } from 'app/services/shopping-cart/shopping-cart.service';
+import { AppUser } from 'shared/models/app-user';
 
 @Component({
   selector: 'bs-navbar',

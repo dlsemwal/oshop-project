@@ -21,7 +21,6 @@ import { MyOrdersComponent } from './components/my-orders/my-orders.component';
 import { AdminProductsComponent } from './components/admin/admin-products/admin-products.component';
 import { AdminOrdersComponent } from './components/admin/admin-orders/admin-orders.component';
 import { LoginComponent } from './components/login/login.component';
-import { environment } from 'src/environments/environment';
 import { ProductFormComponent } from './components/admin/product-form/product-form.component';
 import { FormsModule } from '@angular/forms';
 import { CustomFormsModule } from 'ng2-validation';
@@ -34,6 +33,7 @@ import { ProductCardComponent } from './components/product-card/product-card.com
 import { ProductQuantityComponent } from './product-quantity/product-quantity.component';
 import { CartSummaryComponent } from './components/cart-summary/cart-summary.component';
 import { ShippingFormComponent } from './components/shipping-form/shipping-form.component';
+import { environment } from 'environments/environment';
 
 
 
