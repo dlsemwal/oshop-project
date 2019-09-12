@@ -1,0 +1,49 @@
+<nav class="navbar navbar-expand-md navbar-dark bg-dark fixed-top">
+    <div class="container">
+        <a class="navbar-brand" routerLink="/">
+            <mat-icon class="h3 text-success font-weight-bold text-white align-text-top">
+                spa
+            </mat-icon>
+        </a>
+
+        <div class="collapse navbar-collapse" id="navbarsExampleDefault">
+            <ul class="navbar-nav mr-auto">
+                <li class="nav-item">
+                    <a class="nav-link" routerLink="/shopping-cart">
+                        <mat-icon class="text-white align-text-top">
+                            shopping_cart
+                        </mat-icon>
+                        <span class="badge badge-warning badge-pill"> {{ shoppingCartItemCount }} </span>
+                    </a>
+                </li>
+
+            </ul>
+
+            <ul class="navbar-nav">
+                <li *ngIf="user; else anonymousUser" ngbDropdown class="nav-item dropdown">
+                    <a ngbDropdownToggle class="nav-link dropdown-toggle" id="dropdown01" data-toggle="dropdown"
+                        aria-haspopup="true" aria-expanded="false">
+                        <mat-icon class="text-white align-middle">
+                            person
+                        </mat-icon>
+                        {{user?.name}}
+                    </a>
+                    <div ngbDropdownMenu class="dropdown-menu" aria-labelledby="dropdown01">
+                        <a ngbDropdownItem class="dropdown-item" routerLink="/my-orders">My Orders</a>
+                        <ng-container *ngIf="user?.isAdmin">
+                            <a ngbDropdownItem class="dropdown-item" routerLink="/admin/orders">Manage Orders</a>
+                            <a ngbDropdownItem class="dropdown-item" routerLink="/admin/products">Manage Products</a>
+                        </ng-container>
+                        <a ngbDropdownItem class="dropdown-item" (click)="logout()">Logout</a>
+                    </div>
+                </li>
+                <ng-template #anonymousUser>
+                    <li class="nav-item">
+                        <a class="nav-link" routerLink="/login">Login</a>
+                    </li>
+                </ng-template>
+            </ul>
+
+        </div>
+    </div>
+</nav>
