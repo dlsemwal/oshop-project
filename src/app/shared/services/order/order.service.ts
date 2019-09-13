@@ -15,22 +15,22 @@ export class OrderService {
     private auth: AuthService) { }
 
   async placeOrder(order) {
-    let result = await this.db.list('/orders').push(order)
-    this.cartService.clearCart()
-    return result
+    const result = await this.db.list('/orders').push(order);
+    this.cartService.clearCart();
+    return result;
   }
 
   getOrders() {
-    return this.db.list('/orders').valueChanges()
+    return this.db.list('/orders').valueChanges();
   }
 
   getOrdersByUser() {
     return this.auth.user$.pipe(
       switchMap(user => {
         return this.db.list('/orders', ref => ref.orderByChild('userId')
-          .equalTo(user.uid)).valueChanges()
+          .equalTo(user.uid)).valueChanges();
       })
-    )
+    );
   }
 
 }

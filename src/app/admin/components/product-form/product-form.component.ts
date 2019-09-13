@@ -13,7 +13,8 @@ import { ProductService } from 'shared/services/product/product.service';
 export class ProductFormComponent implements OnInit {
   categories$: Observable<any>;
   id: string;
-  product = {};
+  product: any = {};
+  title: any;
 
   constructor(
     private productService: ProductService,
@@ -21,28 +22,29 @@ export class ProductFormComponent implements OnInit {
     private route: ActivatedRoute,
     private categoriesService: CategoriesService
   ) {
-    this.categories$ = categoriesService.getAll()
-    this.id = route.snapshot.paramMap.get('id')
-    if (this.id) productService.get(this.id)
-      .pipe(
-        take(1)
-      ).subscribe(
-        p => this.product = p
-      )
+    this.categories$ = categoriesService.getAll();
+    this.id = route.snapshot.paramMap.get('id');
+    if (this.id) {
+      productService.get(this.id)
+        .pipe(
+          take(1)
+        ).subscribe(
+          p => this.product = p
+        );
+    }
   }
 
   save(product) {
-    if (this.id) this.productService.update(this.id, product)
-    else this.productService.create(product);
+    if (this.id) { this.productService.update(this.id, product); } else { this.productService.create(product); }
 
-    this.router.navigate(['/admin/products'])
+    this.router.navigate(['/admin/products']);
   }
 
   delete() {
-    if (!confirm('Are you sure? \n You want to delete this product')) return
+    if (!confirm('Are you sure? \n You want to delete this product')) { return; }
 
-    this.productService.delete(this.id)
-    this.router.navigate(['/admin/products'])
+    this.productService.delete(this.id);
+    this.router.navigate(['/admin/products']);
   }
 
   ngOnInit() {

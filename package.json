@@ -8,6 +8,7 @@
     "test": "ng test",
     "lint": "ng lint",
     "e2e": "ng e2e",
+    "deploy:gh":"ng build --prod --base-href='https://dlsemwal.github.io/oshop-project/' && sudo ngh --dir dist/oshop-project",
     "postinstall": "ng build --prod"
   },
   "private": true,
