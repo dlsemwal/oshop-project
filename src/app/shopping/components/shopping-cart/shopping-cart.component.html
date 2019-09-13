@@ -7,7 +7,7 @@
         <ng-container *ngIf="cart$ | async as cart">
             <p>
                 You have {{cart.shoppingCartItemCount }} items in your shopping cart.
-                <button class="btn btn-sm btn-light" (click)="clearCart()">
+                <button class="btn btn-sm btn-light float-right" (click)="clearCart()">
                     Clear Shopping Cart
                 </button>
             </p>
