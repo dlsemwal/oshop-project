@@ -3,20 +3,22 @@ import { NgModule } from '@angular/core';
 import { AngularFireAuthModule } from '@angular/fire/auth';
 import { AngularFireDatabaseModule } from '@angular/fire/database';
 import { FormsModule } from '@angular/forms';
-import { MatFormFieldModule, MatInputModule, MatPaginatorModule, MatSortModule, MatTableModule, MatIconModule } from '@angular/material';
+import {
+  MatFormFieldModule,
+  MatIconModule,
+  MatInputModule,
+  MatPaginatorModule,
+  MatSortModule,
+  MatTableModule,
+} from '@angular/material';
 import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 import { CustomFormsModule } from 'ng2-validation';
 
 import { ProductCardComponent } from './components/product-card/product-card.component';
 import { ProductQuantityComponent } from './components/product-quantity/product-quantity.component';
 
-
-
 @NgModule({
-  declarations: [
-    ProductCardComponent,
-    ProductQuantityComponent,
-  ],
+  declarations: [ProductCardComponent, ProductQuantityComponent],
   imports: [
     CommonModule,
     FormsModule,
@@ -48,4 +50,4 @@ import { ProductQuantityComponent } from './components/product-quantity/product-
     MatIconModule
   ]
 })
-export class SharedModule { }
+export class SharedModule {}
